@@ -9,6 +9,7 @@
     <p>Phone : <%= programmer.phone %></p> 
     <p>Email : <%= programmer.email%></p>
     <%= link_to "Show" , programmer_path(programmer) %>
+    <a data-method="delete" href="/programmers/<%= programmer.id %>" >Delete</a>
   </div>
 
 </div>

@@ -27,6 +27,11 @@ class ProgrammersController < ApplicationController
         redirect_to programmer_path
       end
 
+      def destroy
+        Programmer.find(params[:id]).destroy
+      
+        redirect_to programmers_path
+      end
 
       private
       def programmer_params
