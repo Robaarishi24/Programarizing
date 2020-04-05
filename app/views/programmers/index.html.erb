@@ -1,0 +1,16 @@
+<h1>All Programmers</h1>
+<%= link_to 'Add a Programmer', new_programmer_path %>
+<% @programmers.each do |programmer| %>
+<div class="card">
+  <div class="container">
+    <h4><b><%= programmer.first_name %> 
+    <%= programmer.last_name %> 
+    </b></h4>
+    <p>Phone : <%= programmer.phone %></p> 
+    <p>Email : <%= programmer.email%></p>
+    <%= link_to "Show" , programmer_path(programmer) %>
+  </div>
+
+</div>
+
+<% end %>

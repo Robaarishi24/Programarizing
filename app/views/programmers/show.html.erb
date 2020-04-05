@@ -1,0 +1,17 @@
+<h3><b><%= @programmer.first_name %> 
+    <%= @programmer.last_name %> 
+    </b></h3>
+    <p>Phone : <%= @programmer.phone %></p> 
+    <p>Email : <%= @programmer.email%></p>
+  <%= link_to "New Project", new_project_path(:programmer_id => @programmer.id)%>
+  <br><br>
+    <% @projects.each do |project| %>
+    <div class="card">
+  <div class="container">
+          <strong><%= project.name %></strong>
+          <p><%= project.description%></p>
+          <em><%= project.link %></em>
+         </div>
+         </div>
+    <% end %>
+ 
