@@ -9,4 +9,8 @@ class ProgrammersController < ApplicationController
     def new 
         @programmer = Programmer.new 
     end
+    def create
+        Programmer.create(params.require(:programmer).permit(:first_name, :last_name, :phone, :email))
+    redirect_to programmers_path
+    end
 end
