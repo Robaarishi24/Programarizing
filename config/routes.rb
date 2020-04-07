@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'sign_up' , to: 'pages#sign_up' 
   get 'sign_in' , to: 'pages#sign_in'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

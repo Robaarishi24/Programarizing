@@ -1,4 +1,6 @@
 class ProgrammersController < ApplicationController
+    before_action  :authenticate_user! , only: [:new, :edit, :destroy]
+
     def index
         @programmers = Programmer.all
     end
@@ -7,7 +9,7 @@ class ProgrammersController < ApplicationController
         @programmer = Programmer.find(params[:id])
         @projects = @programmer.projects
     end
-
+ 
     def new 
         @programmer = Programmer.new 
     end

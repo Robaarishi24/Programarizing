@@ -7,13 +7,24 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+
+<% if user_signed_in? %>
+    <p>Welcome <%= current_user.email %>
+    </p>
+    <% end %>
     <ul>
     <li><a href = "http://localhost:3000/programmers" >Home </a></li>
-    <li><a href = "http://localhost:3000/sign_in" >Sign in </a></li> 
-    <li><a href = "http://localhost:3000/sign_up" >Sign up </a></li> 
+    <li><a href = "http://localhost:3000/users/sign_in" >Sign in </a></li> 
+    <li><a href = "http://localhost:3000/users/sign_up" >Sign up </a></li>
+    
+    <% if user_signed_in? %> 
+     <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% end %>
     </ul>
 
   </head>
+   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <body>
     <%= yield %>

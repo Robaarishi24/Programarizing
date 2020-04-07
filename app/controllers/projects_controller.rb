@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+    before_action  :authenticate_user! , only: [:new]
     def new 
         @programmer = Programmer.find(params[:programmer_id])
         @project = Project.new
