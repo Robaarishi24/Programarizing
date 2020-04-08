@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Programarizing</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+<head>
+  <title>Programarizing</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-<% if user_signed_in? %>
-    <p>Welcome <%= current_user.email %>
-    </p>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+  <ul>
+    <li><a href="http://localhost:3000/programmers">Home </a></li>
+    <li><a href="http://localhost:3000/users/sign_in">Sign in </a></li>
+    <li><a href="http://localhost:3000/users/sign_up">Sign up </a></li>
+    <% if user_signed_in? %>
+    <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
     <% end %>
-    <ul>
-    <li><a href = "http://localhost:3000/programmers" >Home </a></li>
-    <li><a href = "http://localhost:3000/users/sign_in" >Sign in </a></li> 
-    <li><a href = "http://localhost:3000/users/sign_up" >Sign up </a></li>
-    
-    <% if user_signed_in? %> 
-     <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-    <% end %>
-    </ul>
+  </ul>
+  <% if user_signed_in? %>
+  <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+    <strong> Welcome ! </strong><%= current_user.email %>
+  </div>
+  <% end %>
+</head>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
 
-  </head>
-   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+</body>
 
-  <body>
-    <%= yield %>
-  </body>
 </html>

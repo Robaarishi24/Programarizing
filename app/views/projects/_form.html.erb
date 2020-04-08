@@ -1,17 +1,19 @@
-<%= form_for @project do |f| %>
-  <%= f.hidden_field :programmer_id, :value => @programmer.id %>
-  <div>
-  	<%= f.label :name, 'Name' %>
-  	<%= f.text_field :name %>
-	  </div>
-	  <div>
-  	<%= f.label :description, 'Description' %>
-  	<%= f.text_area :description %>
-	  </div>
-	  <div>
-    <%= f.label :link, 'Link' %>
-  	<%= f.text_field :link%>
-	  </div>
-  
-  <%= f.submit "Submit" %>
-<% end %>
+<body class="text-center">
+	<%= form_for @project do |f| %>
+	<form class="new_project">
+		<div class="col-sm-3">
+			<%= f.hidden_field :programmer_id, :value => @programmer.id %>
+			<%= f.text_field :name , {:class => "form-control",:placeholder => "Name"}%>
+		</div>
+		<div class="col-sm-3" style="padding-top: 8px;">
+			<%= f.text_area :description  , {:class => "form-control",:placeholder => "Description"}%>
+		</div>
+		<div class="col-sm-3" style="padding-top: 8px;">
+			<%= f.text_field :link  , {:class => "form-control",:placeholder => "Link For Your Project"}%>
+		</div>
+		<div class="submit_">
+			<%= f.submit "Submit" , { :class => "button btn btn-primary"}%>
+		</div>
+	</form>
+	<% end %>
+</body>
