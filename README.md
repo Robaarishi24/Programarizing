@@ -1,7 +1,7 @@
 # Programarizing - Project#4
  
 ### Project Idea : 
-The application displays the work of programmers, and companies choose a programmer to contract with them.
+The application displays the work of programmers .
 ### ERD : 
 ![](https://d.top4top.io/p_1558mwfvt3.jpg)
 
