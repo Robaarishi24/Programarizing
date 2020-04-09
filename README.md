@@ -11,7 +11,10 @@ The application displays the work of programmers .
 
 ### User Story :
  ##### V1 :
- * As a user story i want to view all programmers.
+ * As a user stroy I want register as a new user.
+ * As a user stroy I want sign in.
+ * As user story I want sign out.
+ * As a user story I want to view all programmers.
  * As a user, As a user, I want to view a programmer with him projects.
  * As a user, I want to create a programmer with a given first name, last name, phone and number.
  * As a user, I want to edit a programmer with a given first name, last name, phone and number.
