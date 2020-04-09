@@ -1,7 +1,7 @@
 # Programarizing - Project#4
  
 ### Project Idea : 
-The application displays the work of programmers .
+The application displays the work of programmers and any companies can contact with any one of thim.
 ### ERD : 
 ![](https://d.top4top.io/p_1558mwfvt3.jpg)
 
@@ -25,3 +25,4 @@ The application displays the work of programmers .
  * Full-Stack Rails 
  * Bootstrap
  * SCSS
+ * Visual Studio Code
